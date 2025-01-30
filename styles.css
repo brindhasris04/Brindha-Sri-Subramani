@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(145deg, #d1e8f4, #e8f4ff);
+    font-family: 'Roboto', sans-serif;
+}
+
+.phone {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(145deg, #bdb3b3, #5399d6);
+    border-radius: 50px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.notch {
+    width: 200px;
+    height: 20px;
+    background: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+}
+
+/* Calculator area (screen) */
+.calculator {
+    width: 90%;
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Calculator display */
+.display input {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    color: #333;
+}
+
+/* Buttons layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* General button styles */
+button {
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Active state for buttons */
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Equals button */
+button.equals {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    grid-column: span 2;
+}
+
+/* Hover effect for equals button */
+button.equals:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+/* Power button on the side */
+.power-button {
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .phone {
+        width: 300px;
+        height: 600px;
+    }
+    .display input {
+        font-size: 1.5rem;
+    }
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+}
